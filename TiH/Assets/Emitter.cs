@@ -17,25 +17,22 @@ public class Emitter : MonoBehaviour {
 		bulletrot = gameObject.transform.rotation;
 		//Vector3 offset = new Vector3 (0.5f, 0.0f, 0.0f);
 
+		InvokeRepeating ("SpiralShoot", 0.1f, 0.1f);
 
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
-		transform.Rotate (Vector3.forward, Time.deltaTime * 60, Space.World);
+
+
+	void SpiralShoot()
+	{
 
 		bulletrot = gameObject.transform.rotation;// * (Quaternion.Euler (0.0f, 0.0f, 72.0f));
-
+		
 		//Quaternion.Euler (0.0f, 0.0f, 72.0f); 
-
-
-
-
-
-		//if(Time.deltaTime%1 == 0)
-		//{
+		
+		
+		
 		Instantiate (shot, (gameObject.transform.position + new Vector3 (0.005f, 0.0f, 0.0f)), (bulletrot));
 		bulletrot = gameObject.transform.rotation*rotate1;
 		Instantiate (shot, (gameObject.transform.position + new Vector3 (0.005f, 0.0f, 0.0f)), (bulletrot));
@@ -45,7 +42,20 @@ public class Emitter : MonoBehaviour {
 		Instantiate (shot, (gameObject.transform.position + new Vector3 (0.005f, 0.0f, 0.0f)), (bulletrot));
 		bulletrot = gameObject.transform.rotation*rotate4;
 		Instantiate (shot, (gameObject.transform.position + new Vector3 (0.005f, 0.0f, 0.0f)), (bulletrot));
-		//}
+	
+	
+	}
+
+
+
+	
+	// Update is called once per frame
+	void Update () {
+
+		transform.Rotate (Vector3.forward, Time.deltaTime * 60, Space.World);
+
+
+		
 		//create object at each angle
 		//one should be rotated at zero degrees
 
