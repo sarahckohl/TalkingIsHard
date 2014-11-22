@@ -42,6 +42,7 @@ public class myGUI : MonoBehaviour {
 		stupidFont = new GUIStyle ();
 		stupidFont.fontSize = 72;
 		current = messages [0];
+		StartCoroutine(delay());
 		
 	}
 	
@@ -56,6 +57,13 @@ public class myGUI : MonoBehaviour {
 			response (messages[1],0);
 			convoNum=0;
 				}
+
+		if (convoNum == 2 && !waiting) {
+			
+			StartCoroutine(delay());
+			response (messages[2],0);
+			convoNum=0;
+		}
 		
 		
 		/*if (Input.GetKeyDown ("return")) {
@@ -97,7 +105,7 @@ public class myGUI : MonoBehaviour {
 		messageBuffer2 = current;
 		
 		current = x;
-		convoNum = 1;
+		convoNum = y;
 		//messageBuffer2 = current;
 			
 		//current = messages [1];
@@ -118,7 +126,7 @@ public class myGUI : MonoBehaviour {
 			response ("Excuse me",2);
 		}
 
-		//GUI.Box (previoustext, "");
+		GUI.Box (previoustext, "");
 		GUI.Label (previoustext,"<size=30)>"+ messageBuffer2+"</size>");
 		
 		GUI.Box (textbox, "");
