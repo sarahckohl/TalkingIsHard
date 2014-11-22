@@ -15,7 +15,14 @@ public class Bullet : MonoBehaviour {
 
 	
 	}
-
+	void OnTriggerEnter2D(Collider2D other){
+		
+		
+		if(other.gameObject.tag !=("EditorOnly" )){
+			print ("Hit" + other);
+			Destroy (gameObject);
+		}
+	}
 	void OnBecameInvisible () {
 		//print ("bullet invisible.");
 		DestroyImmediate(gameObject);
