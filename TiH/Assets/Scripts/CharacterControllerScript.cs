@@ -70,10 +70,10 @@ public class CharacterControllerScript : MonoBehaviour {
 		//print (horizontalspeed + ", " + verticalspeed);
 		rigidbody2D.velocity = new Vector2 (horizontalspeed, verticalspeed);
 
-		if (moveVertical > 0 && !facingUp && !focus)
-						Flip ();
-				else if (moveVertical < 0 && facingUp & !focus)
-						Flip ();
+		//if (moveVertical > 0 && !facingUp && !focus)
+		//				Flip ();
+		//		else if (moveVertical < 0 && facingUp & !focus)
+		//				Flip ();
 
 	
 
@@ -98,15 +98,15 @@ public class CharacterControllerScript : MonoBehaviour {
 
 	}
 
-	void Flip()
-	{
-		facingUp = !facingUp;
-		Vector3 theScale = transform.localScale;
-		theScale.y *= -1;
-		transform.localScale = theScale;
+	//void Flip()
+	//{
+	//	facingUp = !facingUp;
+	//	Vector3 theScale = transform.localScale;
+	//	theScale.y *= -1;
+	//	transform.localScale = theScale;
 
 
-	}
+	//}
 
 	//We will need to adapt flip into rotation when we do mouse controls
 	/*
