@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Scripts\CharacterControllerScript.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
+     <Compile Include="Assets\bulletformation.cs" />
      <Compile Include="Assets\myGUI.cs" />
      <Compile Include="Assets\shoot.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
