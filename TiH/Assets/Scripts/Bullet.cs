@@ -24,9 +24,9 @@ public class Bullet : MonoBehaviour {
 			//print ("Hit" + other);
 			//Destroy (gameObject);
 		}
-		if (other.gameObject.tag == ("Player"))
-						print ("Graze");
-
+		if (other.gameObject.tag == ("Player")) {
+						//print ("Graze");
+				}
 		if(other.gameObject.tag == ("Hitbox"))
 		   {
 			print("Hit");
