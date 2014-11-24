@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CharacterControllerScript : MonoBehaviour {
 
+	Vector3 startingposition;
+
 	public float maxSpeed = 1;
 	public float focusreduction = 0.5f;
 	bool facingUp = true;
@@ -23,8 +25,14 @@ public class CharacterControllerScript : MonoBehaviour {
 	void Start () {
 
 		anim = GetComponent<Animator> ();
-	
+		 
 	}
+
+	void Awake()
+	{
+		startingposition = gameObject.transform.position;
+
+		}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -98,6 +106,12 @@ public class CharacterControllerScript : MonoBehaviour {
 
 	}
 
+	void resetPosition()
+	{
+		transform.position = startingposition;
+
+	}
+
 	//void Flip()
 	//{
 	//	facingUp = !facingUp;
@@ -119,4 +133,6 @@ public class CharacterControllerScript : MonoBehaviour {
 
 	}
 */
+
+
 }
