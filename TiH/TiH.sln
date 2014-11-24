@@ -9,6 +9,8 @@ Project("{F2C661EE-3A7E-BCFE-CC36-32ED6BB75401}") = "TiH", "Assembly-CSharp-Edit
 EndProject
 Project("{F2C661EE-3A7E-BCFE-CC36-32ED6BB75401}") = "TiH", "Assembly-UnityScript-firstpass.unityproj", "{1B8BEB15-3684-74F4-EEBB-60693998F73E}"
 EndProject
+Project("{F2C661EE-3A7E-BCFE-CC36-32ED6BB75401}") = "TiH", "Assembly-UnityScript.unityproj", "{685A4D76-1EED-C54D-F91F-6D99EFCEA3BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,11 +33,15 @@ Global
 		{1B8BEB15-3684-74F4-EEBB-60693998F73E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B8BEB15-3684-74F4-EEBB-60693998F73E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B8BEB15-3684-74F4-EEBB-60693998F73E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{685A4D76-1EED-C54D-F91F-6D99EFCEA3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{685A4D76-1EED-C54D-F91F-6D99EFCEA3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{685A4D76-1EED-C54D-F91F-6D99EFCEA3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{685A4D76-1EED-C54D-F91F-6D99EFCEA3BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																						GlobalSection(MonoDevelopProperties) = preSolution
+																																																																								GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
