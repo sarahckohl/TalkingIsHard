@@ -101,7 +101,7 @@ public class myGUI : MonoBehaviour {
 		waiting = false; // Delay ended
 		}
 
-	void response(string x,int y){
+	public void response(string x,int y){
 		messageBuffer2 = current;
 		
 		current = x;
@@ -117,18 +117,21 @@ public class myGUI : MonoBehaviour {
 
 	void OnGUI(){
 		
-		if (GUI.Button (button1, "OOGA")) {
+		/*if (GUI.Button (button1, "OOGA")) {
 			response ("HEY TALK TO ME",1);
 
 		}
 		
 		if (GUI.Button (button2, "BOOGA")) {
 			response ("Excuse me",2);
-		}
+		}*/
 
 		GUI.Box (previoustext, "");
 		GUI.Label (previoustext,"<size=30)>"+ messageBuffer2+"</size>");
-		
+
+		GUI.Box (button1, "OOGA");
+		GUI.Box (button2, "BOOGA");
+
 		GUI.Box (textbox, "");
 		GUI.Label (textbox,"<size=30)>"+ current+"</size>");
 		//GUI.TextArea (new Rect (10, Screen.height-110, Screen.width-20, 100), "This is a text box");
