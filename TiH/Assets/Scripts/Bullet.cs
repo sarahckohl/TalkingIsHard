@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
+	GameController gameController;
 	// Use this for initialization
 	void Start () {
 		//print ("bullet made...");
+		gameController = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController>();
 	}
 
 	// Update is called once per frame
@@ -25,12 +27,13 @@ public class Bullet : MonoBehaviour {
 			//Destroy (gameObject);
 		}
 		if (other.gameObject.tag == ("Player")) {
-						//print ("Graze");
+			gameController.incrementAngerExp(1);
 				}
 		if(other.gameObject.tag == ("Hitbox"))
 		   {
 			print("Hit");
 			Destroy (gameObject);
+			gameController.resetPlayer();
 		}
 
 
