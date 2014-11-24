@@ -47,11 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Amulet.cs" />
+     <Compile Include="Assets\Anger.cs" />
      <Compile Include="Assets\Emitter.cs" />
-     <Compile Include="Assets\Emotions.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Scripts\CharacterControllerScript.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\myGUI.cs" />
      <Compile Include="Assets\bulletformation.cs" />
