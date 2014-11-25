@@ -2,8 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\optionbox.cs">
     <Files>
-      <File FileName="Assets\Scripts\myGUI.cs" Line="19" Column="93" />
-      <File FileName="Assets\Scripts\optionbox.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\myGUI.cs" Line="140" Column="1" />
+      <File FileName="Assets\Scripts\optionbox.cs" Line="52" Column="12" />
+      <File FileName="Assets\BlackBox.cs" Line="9" Column="55" />
+      <File FileName="Assets\Scripts\optionbox2.cs" Line="54" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

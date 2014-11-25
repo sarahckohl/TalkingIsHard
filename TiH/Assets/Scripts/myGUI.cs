@@ -129,8 +129,8 @@ public class myGUI : MonoBehaviour {
 		GUI.Box (previoustext, "");
 		GUI.Label (previoustext,"<size=30)>"+ messageBuffer2+"</size>");
 
-		GUI.Box (button1, "OOGA");
-		GUI.Box (button2, "BOOGA");
+		//GUI.Box (button1, "OOGA");
+		///GUI.Box (button2, "BOOGA");
 
 		GUI.Box (textbox, "");
 		GUI.Label (textbox,"<size=30)>"+ current+"</size>");

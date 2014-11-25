@@ -5,7 +5,7 @@ public class optionbox : MonoBehaviour {
 
 
 	public GameObject textBox;
-	public GameObject booga;
+	public GameObject options2;
 	bool choicePicked;
 	// Use this for initialization
 	void Start () {
@@ -49,7 +49,7 @@ other.DoSomething();
 		if (player.gameObject.tag == "Player") {
 			print ("hit");
 			choicePicked=true;
-			booga.GetComponent<optionbox2>().disable();
+			options2.GetComponent<optionbox2>().disable();
 		}
 		}
 
