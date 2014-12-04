@@ -20,7 +20,9 @@ public class optionbox : MonoBehaviour {
 	void Update () {
 
 		if(Input.GetKeyDown("space")&& choicePicked){
-			textBox.GetComponent<myGUI>().response("HEY COME TALK TO ME",1);
+			textBox.GetComponent<myGUI>().response("HEY COME TALK TO ME",4);
+			StartCoroutine(textBox.GetComponent<myGUI>().delay());
+
 		}
 
 

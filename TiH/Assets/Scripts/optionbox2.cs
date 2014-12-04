@@ -19,7 +19,8 @@ public class optionbox2 : MonoBehaviour {
 	void Update () {
 		
 		if(Input.GetKeyDown("space")&& choicePicked){
-			textBox.GetComponent<myGUI>().response("Excuse me",2);
+			textBox.GetComponent<myGUI>().response("Excuse me",1);
+			StartCoroutine(textBox.GetComponent<myGUI>().delay());
 		}
 		/*	print (pos.x);
 		print (pos.y);
