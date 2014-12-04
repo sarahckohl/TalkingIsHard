@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
 	public CharacterControllerScript characterController;
 	public GameObject angerPrefab;
 	public TextMesh score;
+	public GameObject MeilingEmitterPrefab;
 	public TextMesh angerXPtext;
 
 
@@ -50,12 +51,22 @@ public class GameController : MonoBehaviour {
 	public void dropAnger()
 	{
 		float randX = Random.Range (0.5f,8.5f);
-		Vector3 loc = new Vector3 (4.5f, 6.0f, 0.0f);
+		Vector3 loc = new Vector3 (randX, 6.0f, 0.0f);
 		Quaternion rot = new Quaternion ();
 		Instantiate (angerPrefab,loc,rot);
-
+		spawnMeiling ();
 
 		}
+
+	public void spawnMeiling()
+	{
+		float randX = Random.Range (0.5f,4.5f);
+		Vector3 loc = new Vector3 (randX, 7.5f, 0.0f);
+		Quaternion rot = new Quaternion ();
+		Instantiate (MeilingEmitterPrefab);
+	}
+
+
 
 	//same here, would be nice to generalize this
 	public int getAnger()
