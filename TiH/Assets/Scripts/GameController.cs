@@ -33,24 +33,24 @@ public class GameController : MonoBehaviour {
 	public void incrementAngerExp(int amount)
 	{
 		angerExp += amount;
-		if (angerExp >= 10) {
+		if (angerExp >= 5) {
 			angerExp = 0;
 			dropAnger ();
 		}
-		angerXPtext.text = "Anger:" + angerExp.ToString();
+		angerXPtext.text = "AngerXP: " + angerExp.ToString();
 	}
 
 	//maybe generalize this to LevelUp(emotion)
 	public void AngerUp()
 	{
 		Anger++;
-		score.text = "Anger:" + Anger.ToString();
+		score.text = "Anger: " + Anger.ToString();
 	}
 
 	public void dropAnger()
 	{
 		float randX = Random.Range (0.5f,8.5f);
-		Vector3 loc = new Vector3 (randX, 6.0f, 0.0f);
+		Vector3 loc = new Vector3 (4.5f, 6.0f, 0.0f);
 		Quaternion rot = new Quaternion ();
 		Instantiate (angerPrefab,loc,rot);
 
