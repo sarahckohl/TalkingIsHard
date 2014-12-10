@@ -14,9 +14,9 @@ public class MeilingEmitter : MonoBehaviour {
 	void Start () {
 		target = GameObject.FindWithTag("Player");
 		//lookatRotation = Quaternion.LookRotation (target.transform.position - transform.position, new Vector3(1,0,0));
-		float randX = Random.Range (0.5f,4.5f);
+		float randX = Random.Range (0.5f,9.5f);
 		Vector3 loc = new Vector3 (randX, 7.5f, 0.0f);
-		gameObject.transform.position = Vector3.zero;
+		gameObject.transform.position = new Vector3 (randX, 3.2f, 0.0f);
 
 
 		Vector3 diff = target.transform.position - transform.position;
@@ -27,7 +27,7 @@ public class MeilingEmitter : MonoBehaviour {
 		bulletrot = gameObject.transform.rotation;
 		MeilingShoot ();
 		//Vector3 offset = new Vector3 (0.5f, 0.0f, 0.0f);
-		//Destroy (gameObject);
+		Destroy (gameObject);
 
 	
 	} 
