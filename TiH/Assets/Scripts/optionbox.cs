@@ -5,7 +5,7 @@ public class optionbox : MonoBehaviour {
 
 
 	public GameObject textBox;
-	public GameObject booga;
+	public GameObject options2;
 	bool choicePicked;
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,9 @@ public class optionbox : MonoBehaviour {
 	void Update () {
 
 		if(Input.GetKeyDown("space")&& choicePicked){
-			textBox.GetComponent<myGUI>().response("HEY COME TALK TO ME",1);
+			textBox.GetComponent<myGUI>().response("HEY COME TALK TO ME",4);
+			StartCoroutine(textBox.GetComponent<myGUI>().delay());
+
 		}
 
 
@@ -49,7 +51,7 @@ other.DoSomething();
 		if (player.gameObject.tag == "Player") {
 			print ("hit");
 			choicePicked=true;
-			booga.GetComponent<optionbox2>().disable();
+			options2.GetComponent<optionbox2>().disable();
 		}
 		}
 

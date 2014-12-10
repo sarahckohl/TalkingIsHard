@@ -58,10 +58,10 @@ public class myGUI : MonoBehaviour {
 			convoNum=0;
 				}
 
-		if (convoNum == 2 && !waiting) {
+		if (convoNum == 4 && !waiting) {
 			
 			StartCoroutine(delay());
-			response (messages[2],0);
+			response (messages[4],0);
 			convoNum=0;
 		}
 		
@@ -94,7 +94,7 @@ public class myGUI : MonoBehaviour {
 
 	bool waiting; // tells whether the delay is running
 
-	IEnumerator delay(){
+	public IEnumerator delay(){
 		waiting = true; // Delay started
 
 		yield return new WaitForSeconds(4);
@@ -129,8 +129,8 @@ public class myGUI : MonoBehaviour {
 		GUI.Box (previoustext, "");
 		GUI.Label (previoustext,"<size=30)>"+ messageBuffer2+"</size>");
 
-		GUI.Box (button1, "OOGA");
-		GUI.Box (button2, "BOOGA");
+		//GUI.Box (button1, "OOGA");
+		///GUI.Box (button2, "BOOGA");
 
 		GUI.Box (textbox, "");
 		GUI.Label (textbox,"<size=30)>"+ current+"</size>");
