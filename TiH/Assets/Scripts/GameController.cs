@@ -5,22 +5,29 @@ public class GameController : MonoBehaviour {
 
 	private int angerExp;
 	private int Anger;
+	private int happyExp;
+	private int Happy;
 	public GameObject Player;
 	public CharacterControllerScript characterController;
 	public GameObject angerPrefab;
-	public TextMesh score;
+	public GameObject happyPrefab;
 	public GameObject MeilingEmitterPrefab;
-	public TextMesh angerXPtext;
-
+	//public TextMesh angerXPtext;
+	public TextMesh score;
+	public TextMesh happyscore;
 
 	// Use this for initialization
 	void Start () {
 		characterController =  GameObject.FindGameObjectWithTag ("Player").GetComponent<CharacterControllerScript>();
+		InvokeRepeating("spawnMeiling", 4.0f,4.0f);
 
 		Anger = 0;
 		angerExp = 0;
+		Happy = 0;
+		happyExp = 0;
 		score.text = "Anger: 0";
-		angerXPtext.text = "AngerXP: 0";
+		happyscore.text = "Happy: 0";
+		//angerXPtext.text = "AngerXP: 0";
 
 	
 	}
@@ -38,7 +45,7 @@ public class GameController : MonoBehaviour {
 			angerExp = 0;
 			dropAnger ();
 		}
-		angerXPtext.text = "AngerXP: " + angerExp.ToString();
+		//angerXPtext.text = "AngerXP: " + angerExp.ToString();
 	}
 
 	//maybe generalize this to LevelUp(emotion)
@@ -54,15 +61,40 @@ public class GameController : MonoBehaviour {
 		Vector3 loc = new Vector3 (randX, 6.0f, 0.0f);
 		Quaternion rot = new Quaternion ();
 		Instantiate (angerPrefab,loc,rot);
-		spawnMeiling ();
+		//spawnMeiling ();
 
 		}
 
+
+	public void incrementHappyExp(int amount)
+	{
+		happyExp += amount;
+		if (happyExp >= 5) {
+			happyExp = 0;
+			dropHappy ();
+		}
+	}
+	
+	//maybe generalize this to LevelUp(emotion)
+	public void HappyUp()
+	{
+		Happy++;
+		happyscore.text = "Happy: " + Happy.ToString();
+		print ("DROP DA HAPPY");
+	}
+	
+	public void dropHappy()
+	{
+		float randX = Random.Range (0.5f,8.5f);
+		Vector3 loc = new Vector3 (randX, 6.0f, 0.0f);
+		Quaternion rot = new Quaternion ();
+		Instantiate (happyPrefab,loc,rot);
+		//spawnMeiling ();
+		
+	}
+
 	public void spawnMeiling()
 	{
-		float randX = Random.Range (0.5f,4.5f);
-		Vector3 loc = new Vector3 (randX, 7.5f, 0.0f);
-		Quaternion rot = new Quaternion ();
 		Instantiate (MeilingEmitterPrefab);
 	}
 
@@ -85,6 +117,8 @@ public class GameController : MonoBehaviour {
 	{
 		Anger = 0;
 		angerExp = 0;
+		Happy = 0;
+		happyExp = 0;
 
 	}
 
