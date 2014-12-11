@@ -105,7 +105,10 @@ public class GameController : MonoBehaviour {
 	{
 		return Anger;
 	}
-
+	public int getHappy()
+	{
+		return Happy;
+	}
 	public void resetPlayer()
 	{
 		resetEmotions ();
