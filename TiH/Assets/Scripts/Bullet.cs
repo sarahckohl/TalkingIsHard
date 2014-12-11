@@ -34,6 +34,7 @@ public class Bullet : MonoBehaviour {
 			print("Hit");
 			Destroy (gameObject);
 			gameController.resetPlayer();
+			gameController.resetEmotions();
 		}
 
 
