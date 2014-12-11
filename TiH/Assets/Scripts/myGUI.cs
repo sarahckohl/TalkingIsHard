@@ -5,13 +5,14 @@ using System.Collections;
 
 
 public class myGUI : MonoBehaviour {
-	
-	string[] messages = new string[5]{
-		"(They don't seem to be paying attention.)",
-		"'Oh. Uh... Hi..?'",
-		"'Thats... cool I guess.'",
-		"*Farts nervously*",
-		"*awkward intensifies*"
+	public int choicePairNum=0;
+	string[] messages = new string[6]{
+		"(A girl stands there. She is reading a book)",
+		"(She looks up)'Oh. Uh... Hi..?'",
+		"*Awkward silence*",
+		"Go jump off a cliff",
+		"It's Oedipus.",
+		"Take a long hike off a short pier."
 		
 	};
 	//public string messages= "HOLA";
@@ -51,20 +52,46 @@ public class myGUI : MonoBehaviour {
 		//timer += Time.deltaTime;
 	
 		//print (timer);
-		if (convoNum == 1 && !waiting) {
-
-			StartCoroutine(delay());
-			response (messages[1],0);
-			convoNum=0;
-				}
-
+		//right side
 		if (convoNum == 4 && !waiting) {
-			
+
 			StartCoroutine(delay());
 			response (messages[4],0);
 			convoNum=0;
+			choicePairNum=4;
+				}
+
+		//left side
+		if (convoNum == 1 && !waiting) {
+			
+			StartCoroutine(delay());
+			response (messages[1],0);
+			convoNum=0;
+			choicePairNum=1;
 		}
-		
+
+		if (convoNum == 2 && !waiting) {
+			
+			StartCoroutine(delay());
+			response (messages[2],0);
+			convoNum=0;
+			choicePairNum=2;
+		}
+
+		if (convoNum == 3 && !waiting) {
+			
+			StartCoroutine(delay());
+			response (messages[3],0);
+			convoNum=0;
+			choicePairNum=3;
+		}
+		if (convoNum == 5 && !waiting) {
+			
+			StartCoroutine(delay());
+			response (messages[5],0);
+			convoNum=0;
+			choicePairNum=5;
+		}
 		
 		/*if (Input.GetKeyDown ("return")) {
 						currIndex = (currIndex + 1) % messages.Length;

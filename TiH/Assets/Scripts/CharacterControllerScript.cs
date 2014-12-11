@@ -39,7 +39,9 @@ public class CharacterControllerScript : MonoBehaviour {
 
 		float moveHorizontal = Input.GetAxisRaw ("Horizontal");
 		float moveVertical = Input.GetAxisRaw ("Vertical");
-
+		if(Input.GetKeyDown("space")){
+			resetPosition ();
+		}
 		if (Input.GetKey ("left shift"))
 						focus = true;
 				else
