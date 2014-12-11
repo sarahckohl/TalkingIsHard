@@ -122,6 +122,9 @@ public class GameController : MonoBehaviour {
 		angerExp = 0;
 		Happy = 0;
 		happyExp = 0;
+		score.text = "Anger: " + Anger.ToString();
+		happyscore.text = "Happy: " + Happy.ToString();
+
 
 	}
 
